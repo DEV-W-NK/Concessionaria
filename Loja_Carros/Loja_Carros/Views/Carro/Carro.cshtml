@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Loja_Carros.Models.Carro>
+@{
+    ViewData["Title"] = "Carros";
+}
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">Carros</h1>
+        <p class="lead">Aqui vemos o resultado da implementação da <i>Model</i> <strong>Carro</strong>.</p>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Fabricante</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Marca</td>
+                    <td>@cliente.Modelo</td>
+                    <td>@cliente.Ano</td>
+                    <td>@cliente.Fabricante</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
